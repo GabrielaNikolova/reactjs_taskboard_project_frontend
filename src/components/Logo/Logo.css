@@ -1,0 +1,17 @@
+
+.logo {
+    display: block;
+    vertical-align: middle;
+    stroke: currentColor;
+    --tw-text-opacity: 1;
+    color: rgba(79, 70, 229, var(--tw-text-opacity));
+    width: 6rem;
+}
+.cls-1, .cls-2 {
+    font-size: 36px;
+    fill: rgba(79, 70, 229, var(--tw-text-opacity));
+    font-family: InkFree, Ink Free, serif;
+    stroke-miterlimit: 10;
+    stroke-width: 3px;
+}
+
