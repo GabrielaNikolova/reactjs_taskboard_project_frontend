@@ -1,8 +1,9 @@
 import './CardsWrapper.css';
+
 function CardsWrapper() {
     return (
         <div className="card-wrapper">
-            <div className="card-wrapper-header">
+            <header className="card-wrapper-header">
                 <span className="card-wrapper-title">Backlog</span>
                 <span
                     className="cards-counter">6</span>
@@ -13,7 +14,7 @@ function CardsWrapper() {
                               d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
                     </svg>
                 </button>
-            </div>
+            </header>
             <div className="flex flex-col pb-2 overflow-auto">
                 <div
                     className="relative flex flex-col items-start p-4 mt-3 bg-white rounded-lg cursor-pointer bg-opacity-90 group hover:bg-opacity-100"
@@ -63,6 +64,17 @@ function CardsWrapper() {
                     </div>
                 </div>
             </div>
+
+            <footer className="card-wrapper-footer">
+                <a className="add-card-composer text-sm font-semibold" href="#">
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                              d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                    </svg>
+                    <span className="js-add-a-card">Add a card</span>
+                </a>
+            </footer>
+
         </div>
 
 
