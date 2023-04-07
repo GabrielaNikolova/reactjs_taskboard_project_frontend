@@ -3,6 +3,7 @@
 @import "components/Header/Header.css";
 @import "components/Navbar/Navbar.css";
 @import "components/CardsWrapper/CardsWrapper.css";
+@import "components/Card/Card.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -20,3 +21,4 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+

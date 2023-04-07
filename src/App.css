@@ -28,21 +28,48 @@
     border-style: solid;
     border-color: #e5e7eb;
     --tw-shadow: 0 0 #0000;
-    --tw-ring-inset: var(--tw-empty, );
+    --tw-ring-inset: var(--tw-empty,);
     --tw-ring-offset-width: 0px;
     --tw-ring-offset-color: #fff;
     --tw-ring-color: rgba(59, 130, 246, 0.5);
     --tw-ring-offset-shadow: 0 0 #0000;
     --tw-ring-shadow: 0 0 #0000;
-    background-image: linear-gradient(to top right,var(--tw-gradient-stops));
+    background-image: linear-gradient(to top right, var(--tw-gradient-stops));
     --tw-gradient-from: #bfdbfe;
-    --tw-gradient-stops: var(--tw-gradient-from),#c7d2fe,var(--tw-gradient-to, rgba(199, 210, 254, 0));
+    --tw-gradient-stops: var(--tw-gradient-from), #c7d2fe, var(--tw-gradient-to, rgba(199, 210, 254, 0));
     --tw-gradient-to: #fbcfe8;
     display: flex;
     flex-direction: column;
     height: 100vh;
     overflow: auto;
     --tw-text-opacity: 1;
-    color: rgba(55,65,81,var(--tw-text-opacity));
+    color: rgba(55, 65, 81, var(--tw-text-opacity));
     width: 100vw;
 }
+
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;  /* 24px Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+

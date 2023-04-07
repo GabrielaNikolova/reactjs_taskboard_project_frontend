@@ -1,0 +1,55 @@
+.card-ticket {
+    margin-top: 1rem !important;
+    padding: 1.5rem !important;
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity)) !important;
+    position: relative;
+    display: flex;
+    cursor: context-menu;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 0.5rem;
+    --tw-bg-opacity: 0.9;
+}
+
+.card-priority-low, .card-priority-medium, .card-priority-high {
+    padding-right: 0.6rem !important;
+    padding-left: 0.6rem !important;
+    display: flex;
+    height: 1.5rem;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 500;
+    color: white;
+}
+
+.card-priority-low{
+    background: linear-gradient(90deg, #9ea7fc 17%, #6eb4f7 83%);
+}
+
+.card-priority-medium {
+    background: linear-gradient(138.6789deg, #81d5ee 17%, #7ed492 83%);
+}
+
+.card-priority-high {
+    background: linear-gradient(138.6789deg, #c781ff 17%, #e57373 83%);
+}
+
+
+.card-footer {
+    padding: var(--bs-card-cap-padding-y) var(--bs-card-cap-padding-x);
+    background-color: var(--bs-card-cap-bg);
+    border-top: var(--bs-card-border-width) solid var(--bs-card-border-color);
+    margin-top: 1rem !important;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 500;
+    --tw-text-opacity: 1;
+    color: rgb(156 163 175 / var(--tw-text-opacity));
+    border-radius: 0 0 var(--bs-card-inner-border-radius) var(--bs-card-inner-border-radius);
+}
