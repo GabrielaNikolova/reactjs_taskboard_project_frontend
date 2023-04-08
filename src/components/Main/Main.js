@@ -8,7 +8,7 @@ function Main(){
             <div className="px-10 mt-6">
                 <h1 className="text-2xl font-bold">Team Project Board</h1>
             </div>
-            <div className="wrappers-container flex flex-grow px-10 mt-4 space-x-6 overflow-auto">
+            <div className="wrappers-container space-x-6">
                 <CardsWrapper/>
                 <div className="flex flex-col flex-shrink-0 w-72">
                     <div className="flex items-center flex-shrink-0 h-10 px-2">

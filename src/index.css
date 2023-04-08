@@ -2,6 +2,7 @@
 @import "components/Logo/Logo.css";
 @import "components/Header/Header.css";
 @import "components/Navbar/Navbar.css";
+@import "components/Main/Main.css";
 @import "components/CardsWrapper/CardsWrapper.css";
 @import "components/Card/Card.css";
 @tailwind base;
