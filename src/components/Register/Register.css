@@ -1,0 +1,13 @@
+.signup-btn{
+    text-decoration: inherit;
+    -webkit-appearance: button;
+    font-weight: 500;
+    border-radius: .5rem;
+    color: whitesmoke;
+    padding: .4rem 0.7rem;
+    text-align: center;
+    line-height: 1.25rem;
+    --bs-bg-opacity: .8;
+    background-color: rgb(67 56 202 / var(--bs-bg-opacity));
+    cursor: pointer;
+}

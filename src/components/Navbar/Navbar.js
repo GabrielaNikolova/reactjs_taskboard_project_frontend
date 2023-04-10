@@ -1,7 +1,10 @@
 import Dropdown from 'react-bootstrap/Dropdown';
+import {useState} from "react";
 import './Navbar.css';
+import Register from "../Register/Register";
 
 function Navbar() {
+    const [showRegister, setShowRegister] = useState(false);
     return (
         <>
             <div className="navigation">
@@ -27,8 +30,12 @@ function Navbar() {
                     </Dropdown.Menu>
                 </Dropdown>
 
-                <a type="button" href="#" className="nav-button mx-2 text-md font-semibold">Login</a>
-                <a type="button" href="#" className="nav-button mx-2 text-md font-semibold">Register</a>
+                <a type="button" href="#"
+                   className="nav-button mx-2 text-md font-semibold">Login</a>
+                <>
+                    <a onClick={() => setShowRegister(true)}  type="button" href="#" className="nav-button mx-2 text-md font-semibold">Register</a>
+                    <Register show={showRegister} close={() => setShowRegister(false)}/>
+                </>
             </div>
         </>
     );

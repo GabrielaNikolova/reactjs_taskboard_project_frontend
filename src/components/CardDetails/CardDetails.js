@@ -60,7 +60,7 @@ function CardDetails(props) {
                         </div>
                     </div>
 
-                    <div className="flex items-center space-x-4">
+                    <div onClick={props.close} className="flex items-center space-x-4">
                         <button type="submit"
                                 className="update-card-btn">
                             Update Task

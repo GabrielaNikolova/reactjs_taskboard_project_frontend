@@ -6,6 +6,7 @@
 @import "components/CardsWrapper/CardsWrapper.css";
 @import "components/Card/Card.css";
 @import "components/CardDetails/CardDetails.css";
+@import "components/Register/Register.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

@@ -1,7 +1,6 @@
 import './Card.css';
 import CardDetails from "../CardDetails/CardDetails";
-import React, { useState } from 'react';
-import {Modal} from "react-bootstrap";
+import { useState } from 'react';
 
 function Card() {
 
