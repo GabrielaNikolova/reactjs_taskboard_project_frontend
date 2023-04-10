@@ -22,8 +22,6 @@ function Navbar() {
                     <Dropdown.Menu className="dropdown-menu">
                         <Dropdown.Item className="mx-2 text-md font-semibold text-indigo-700" href="#/action-1">Your
                             Profile</Dropdown.Item>
-                        <Dropdown.Item className="mx-2 text-md font-semibold text-indigo-700"
-                                       href="#/action-2">Settings</Dropdown.Item>
                         <Dropdown.Item className="mx-2 text-md font-semibold text-indigo-700" href="#/action-3">Sign
                             out</Dropdown.Item>
                     </Dropdown.Menu>

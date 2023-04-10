@@ -1,15 +1,24 @@
 import './Card.css';
+import CardDetails from "../CardDetails/CardDetails";
+import React, { useState } from 'react';
+import {Modal} from "react-bootstrap";
 
 function Card() {
+
+    const [showDetails, setShowDetails] = useState(false);
+
     return (
         <div className="card-ticket bg-opacity-90 group hover:bg-opacity-100" draggable="true">
             <header className="card-header flex items-center">
                     <span>
                 <h3 className="card-priority-low">low priority</h3></span>
-                <button
+                <>
+                <button onClick={()=> setShowDetails(true)}
                     className="absolute top-0 right-0 flex items-center justify-center hidden w-5 h-5 mt-3 mr-2 text-gray-500 rounded hover:bg-gray-200 hover:text-gray-700 group-hover:flex">
                     <span className="material-icons">edit</span>
                 </button>
+                    <CardDetails show={showDetails} close={()=> setShowDetails(false)}/>
+                </>
             </header>
             <h4 className="card-title mt-3 text-sm font-medium">This is the title of the card for the thing
                 that needs to be done.</h4>

@@ -1,0 +1,28 @@
+.update-card-btn{
+    text-decoration: inherit;
+    -webkit-appearance: button;
+    font-weight: 500;
+    border-radius: .5rem;
+    color: whitesmoke;
+    padding: .4rem 0.7rem;
+    text-align: center;
+    line-height: 1.25rem;
+    --bs-bg-opacity: .8;
+    background-color: rgb(67 56 202 / var(--bs-bg-opacity));
+    cursor: pointer;
+}
+
+.delete-card-btn{
+    text-decoration: inherit;
+    -webkit-appearance: button;
+    font-weight: 500;
+    border-radius: .5rem;
+    padding: .4rem 0.7rem;
+    text-align: center;
+    line-height: 1.25rem;
+    background-color: transparent;
+    --tw-border-opacity: 1;
+    --tw-text-opacity: 1;
+    color: rgb(220 38 38 / var(--tw-text-opacity));
+    cursor: pointer;
+}
