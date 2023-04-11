@@ -3,10 +3,12 @@ import {useState} from "react";
 import './Navbar.css';
 import Register from "../Register/Register";
 import Login from "../Login/Login";
+import AddProject from "../AddProject/AddProject";
 
 function Navbar() {
     const [showRegister, setShowRegister] = useState(false);
     const [showLogin, setShowLogin] = useState(false);
+    const [showAddProject, setShowAddProject] = useState(false);
 
     return (
         <>
@@ -16,8 +18,12 @@ function Navbar() {
                     <Dropdown.Menu className="dropdown-menu">
                         <Dropdown.Item className="mx-2 text-md font-semibold text-indigo-700" href="#/action-1">All
                             Projects</Dropdown.Item>
-                        <Dropdown.Item className="mx-2 text-md font-semibold text-indigo-700" href="#/action-2">Add New
+
+                        <Dropdown.Item onClick={() => setShowAddProject(true)}
+                                       className="mx-2 text-md font-semibold text-indigo-700" href="#/action-2">Add New
                             Project</Dropdown.Item>
+                        <AddProject show={showAddProject} close={() => setShowAddProject(false)}/>
+
                     </Dropdown.Menu>
                 </Dropdown>
                 <a className="mx-2 text-md font-semibold text-gray-600 hover:text-indigo-700" href="#">Team</a>
