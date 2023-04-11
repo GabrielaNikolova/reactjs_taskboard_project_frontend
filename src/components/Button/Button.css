@@ -1,11 +1,12 @@
-.delete-card-btn{
+.custom-btn{
     font-weight: 400;
     font-size: small;
     border-radius: .5rem;
+    color: whitesmoke;
     padding: .4rem 0.7rem;
     text-align: center;
     line-height: 0.8rem;
-    --tw-text-opacity: 1;
-    color: rgb(220 38 38 / var(--tw-text-opacity));
+    --bs-bg-opacity: .8;
+    background-color: rgb(67 56 202 / var(--bs-bg-opacity));
+    cursor: pointer;
 }
-

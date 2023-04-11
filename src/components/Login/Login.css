@@ -1,13 +1,30 @@
-.signin-btn{
-    text-decoration: inherit;
-    -webkit-appearance: button;
-    font-weight: 500;
-    border-radius: .5rem;
-    color: whitesmoke;
-    padding: .4rem 0.7rem;
-    text-align: center;
+.input-field{
+    pointer-events: auto;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-weight: inherit;
+    margin: 0;
+    border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color)!important;
+    display: block;
+    width: 100%;
+    border-radius: 0.5rem;
+    --tw-border-opacity: 1;
+    --tw-bg-opacity: 1;
+    background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+    padding: 0.625rem;
+    --tw-text-opacity: 1;
+    color: rgb(17 24 39 / var(--tw-text-opacity));
+    font-size: 0.875rem;
     line-height: 1.25rem;
-    --bs-bg-opacity: .8;
-    background-color: rgb(67 56 202 / var(--bs-bg-opacity));
-    cursor: pointer;
+
+}
+
+.input-field-label{
+    margin-bottom: .5rem!important;
+    display: block;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    --tw-text-opacity: 1;
+    color: rgb(17 24 39 / var(--tw-text-opacity));
 }

@@ -17,11 +17,9 @@
 
 .nav-button {
     border-radius: .5rem;
-    background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
-    --tw-gradient-from: #7e3af2;
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-    --tw-gradient-to: #3f83f8;
-    padding: .625rem 1.25rem;
+    --bs-bg-opacity: 0.8;
+    background-color: rgb(67 56 202 / var(--bs-bg-opacity)) !important;
+    padding: .4rem 0.7rem;
     text-align: center;
     line-height: 1.25rem;
     --tw-text-opacity: 1;

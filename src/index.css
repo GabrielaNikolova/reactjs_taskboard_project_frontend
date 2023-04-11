@@ -4,6 +4,7 @@
 @import "components/Navbar/Navbar.css";
 @import "components/Main/Main.css";
 @import "components/CardsWrapper/CardsWrapper.css";
+@import "components/AddCard/AddCard.css";
 @import "components/Card/Card.css";
 @import "components/CardDetails/CardDetails.css";
 @import "components/Register/Register.css";

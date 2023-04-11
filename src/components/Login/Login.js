@@ -3,6 +3,7 @@ import {Form} from "react-bootstrap";
 import {Modal} from "react-bootstrap";
 import Register from "../Register/Register";
 import {useState} from "react";
+import Button from "../Button/Button";
 
 
 function Login(props) {
@@ -25,21 +26,20 @@ function Login(props) {
                     <Form className="space-y-4 md:space-y-6" action="#">
                         <div>
                             <label htmlFor="username"
-                                   className="block mb-2 text-sm font-medium text-gray-900">Username</label>
+                                   className="input-field-label">Username</label>
                             <input type="username" name="username" id="username"
-                                   className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                                   placeholder="username" required=""/>
+                                   className="input-field"                                   required=""/>
                         </div>
                         <div>
                             <label htmlFor="password"
-                                   className="block mb-2 text-sm font-medium text-gray-900">Password</label>
+                                   className="input-field-label">Password</label>
                             <input type="password" name="password" id="password" placeholder="••••••••"
-                                   className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                                   required=""/>
+                                   className="input-field"                                   required=""/>
                         </div>
-                        <button onClick={props.close} type="submit"
-                                className="signin-btn">Sign in
-                        </button>
+                        <Button
+                            onClick={props.close}
+                            value={"Sign in"}
+                        />
                         <p className="text-sm font-light text-gray-500">
                             Don’t have an account yet? <a onClick={()=> setShowRegister(true)} href="#"
                                                           className="font-medium text-primary-600 hover:underline ">Register</a>

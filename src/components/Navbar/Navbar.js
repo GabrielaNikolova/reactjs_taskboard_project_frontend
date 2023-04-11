@@ -38,7 +38,7 @@ function Navbar() {
                     <Login show={showLogin} close={() => setShowLogin(false)}/>
 
                     <a onClick={() => setShowRegister(true)} type="button" href="#"
-                       className="nav-button mx-2 text-md font-semibold">Register</a>
+                       className="nav-button text-md font-semibold">Register</a>
                     <Register show={showRegister} close={() => setShowRegister(false)}/>
                 </>
             </div>

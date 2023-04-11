@@ -1,8 +1,11 @@
 import './AddCard.css';
+import Button from "../Button/Button";
+import {Form} from "react-bootstrap";
 
 function AddCard() {
+
     return (
-        <form className="add-card-form">
+        <Form className="add-card-form">
             <header className="add-card-form-header">
                 <span className="priority-button form-low-pr">
                     <input className="form-checkbox" type="radio" name="priority"
@@ -19,13 +22,15 @@ function AddCard() {
                     className="form-label text-md font-medium" htmlFor="High Priority">High Priority</label>
                 </span>
             </header>
-            <textarea className="add-card-textarea text-gray-700 text-sm font-medium" typeof='text'
+            <textarea className="add-card-textarea text-gray-600 text-sm font-medium" typeof='text'
                       placeholder="Enter a title for this card…"
-                      spellCheck="false"></textarea>
+                      spellCheck="false">Enter a title for this card…</textarea>
             <footer className="add-card-form-footer">
-                <input className="form-add-btn" type="submit" disabled="" value="Add"/>
+                <Button
+                    value={"Add"}
+                />
             </footer>
-        </form>
+        </Form>
     );
 }
 
