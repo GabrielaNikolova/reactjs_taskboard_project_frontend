@@ -1,0 +1,8 @@
+.comments-section {
+    position: relative;
+}
+
+.comments-list {
+    overflow: auto !important;
+    height: 200px;
+}

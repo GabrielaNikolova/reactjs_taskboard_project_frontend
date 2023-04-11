@@ -1,3 +1,33 @@
+.details-box{
+    overflow: auto;
+    height: 100%;
+}
+
+.desc-box{
+    pointer-events: auto;
+    --bs-bg-opacity: 1;
+    --tw-bg-opacity: 1;
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb;
+    font-family: inherit;
+    font-weight: inherit;
+    margin: 0;
+    resize: vertical;
+    padding: .25rem!important;
+    display: block;
+    width: 100%;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    --tw-text-opacity: 1;
+    color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+
+.desc-box:disabled{
+    background-color: transparent !important;
+}
+
 .delete-card-btn{
     font-weight: 400;
     font-size: small;
