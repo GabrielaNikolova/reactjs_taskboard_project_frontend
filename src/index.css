@@ -12,6 +12,7 @@
 @import "components/CommentsSection/Comment/Comment.css";
 @import "components/CommentsSection/AddComment/AddComment.css";
 @import "components/CommentsSection/CommentsSection.css";
+@import "components/ProjectsList/ProjectsList.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

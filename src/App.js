@@ -1,6 +1,7 @@
 import './App.css';
 import Header from './components/Header/Header.js';
 import Main from "./components/Main/Main";
+import ProjectsList from "./components/ProjectsList/ProjectsList";
 
 function App() {
     return (

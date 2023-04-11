@@ -1,0 +1,16 @@
+.projects-wrapper {
+    margin: 0 auto;
+    align-items: center;
+    /*justify-content: center !important;*/
+    display: list-item;
+    box-sizing: border-box;
+    line-height: inherit;
+    min-width: 60%;
+    max-width: 95%;
+    padding: 1.25rem;
+    -webkit-font-smoothing: antialiased;
+}
+
+.projects-wrapper::marker {
+    color: transparent;
+}
