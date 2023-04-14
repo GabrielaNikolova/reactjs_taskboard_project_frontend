@@ -1,13 +1,13 @@
 import Dropdown from 'react-bootstrap/Dropdown';
 import {useState} from "react";
 import './Navbar.css';
-import Register from "../Register/Register";
-import Login from "../Login/Login";
-import AddProject from "../AddProject/AddProject";
+import Register from "../../Register/Register";
+import Login from "../../Login/Login";
+import AddProject from "../../AddProject/AddProject";
 
 function Navbar() {
-    const [showRegister, setShowRegister] = useState(false);
-    const [showLogin, setShowLogin] = useState(false);
+    // const [showRegister, setShowRegister] = useState(false);
+    // const [showLogin, setShowLogin] = useState(false);
     const [showAddProject, setShowAddProject] = useState(false);
 
     return (
@@ -39,13 +39,13 @@ function Navbar() {
                     </Dropdown.Menu>
                 </Dropdown>
                 <>
-                    <a onClick={() => setShowLogin(true)} type="button" href="#"
+                    <a  type="button" href="#"
                        className="nav-button mx-2 text-md font-semibold">Login</a>
-                    <Login show={showLogin} close={() => setShowLogin(false)}/>
+                    {/*<Login show={showLogin} close={() => setShowLogin(false)}/>*/}
 
-                    <a onClick={() => setShowRegister(true)} type="button" href="#"
+                    <a type="button" href="#"
                        className="nav-button text-md font-semibold">Register</a>
-                    <Register show={showRegister} close={() => setShowRegister(false)}/>
+                    {/*<Register show={showRegister} close={() => setShowRegister(false)}/>*/}
                 </>
             </div>
         </>

@@ -1,12 +1,11 @@
-import './Main.css';
+import './CardsCatalog.css';
 import CardsWrapper from "../CardsWrapper/CardsWrapper";
-import ProjectsList from "../ProjectsList/ProjectsList";
 
-function Main() {
+function CardsCatalog() {
     return (
 
         <main className="main-container">
-            {/*<ProjectsList/>*/}
+            {/*<ProjectsCatalog/>*/}
             <div className="px-10 mt-6">
                 <h1 className="text-2xl font-bold">Team Project Board</h1>
             </div>
@@ -21,4 +20,4 @@ function Main() {
     );
 }
 
-export default Main;
+export default CardsCatalog;

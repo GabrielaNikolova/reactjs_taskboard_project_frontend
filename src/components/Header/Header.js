@@ -1,6 +1,6 @@
 import './Header.css';
-import Logo from "../Logo/Logo";
-import Navbar from "../Navbar/Navbar";
+import Logo from "./Logo/Logo";
+import Navbar from "./Navbar/Navbar";
 
 function Header() {
     return (

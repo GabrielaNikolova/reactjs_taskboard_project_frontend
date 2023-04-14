@@ -1,9 +1,16 @@
-.input-field{
+.register-page{
+    margin: auto;
+    align-items: center;
+    width: 50%!important;
+    max-width: 400px;
+
+}
+
+.register-page, .input-field{
     pointer-events: auto;
     box-sizing: border-box;
     font-family: inherit;
     font-weight: inherit;
-    margin: 0;
     border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color)!important;
     display: block;
     width: 100%;

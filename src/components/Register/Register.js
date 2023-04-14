@@ -1,22 +1,15 @@
 import './Register.css';
 import {Form} from "react-bootstrap";
-import {Modal} from "react-bootstrap";
 import Button from "../Button/Button";
 
 
-function Register(props) {
+function Register() {
 
     return (
-        <Modal
-            show={props.show}
-            cancel={props.close}
-            size="sm"
-            centered
-        >
             <div
-                className="w-full bg-white rounded-lg shadow">
+                className="register-page w-full bg-white rounded-lg shadow">
                 <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-                    <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">
+                    <h1 className="text-center text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">
                         Create an account
                     </h1>
                     <Form className="space-y-4 md:space-y-6" action="#">
@@ -28,10 +21,10 @@ function Register(props) {
                                    className="input-field"                                   placeholder="John Doe" required=""/>
                         </div>
                         <div>
-                            <label htmlFor="username"
-                                   className="input-field-label">Username</label>
-                            <input type="username" name="username" id="username"
-                                   placeholder="username"
+                            <label htmlFor="email"
+                                   className="input-field-label">Email</label>
+                            <input type="email" name="email" id="email"
+                                   placeholder="email@a.com"
                                    className="input-field"                                   required=""/>
                         </div>
                         <div>
@@ -43,7 +36,6 @@ function Register(props) {
                                    required=""/>
                         </div>
                             <Button
-                                onClick={props.close}
                                 value={"Sign up"}
                             />
                             <p className="text-sm font-light text-gray-500 dark:text-gray-400">
@@ -54,7 +46,6 @@ function Register(props) {
                     </Form>
                 </div>
             </div>
-        </Modal>
 
     );
 

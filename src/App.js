@@ -1,15 +1,21 @@
-import './App.css';
 import Header from './components/Header/Header.js';
-import Main from "./components/Main/Main";
-import ProjectsList from "./components/ProjectsList/ProjectsList";
+import CardsCatalog from "./components/CardsCatalog/CardsCatalog";
+import Home from "./components/Home/Home";
+import './App.css';
+import Register from "./components/Register/Register";
+import Login from "./components/Login/Login";
 
 function App() {
     return (
-        <body
-            className="flex flex-col w-screen h-screen overflow-auto text-gray-700 bg-gradient-to-tr from-blue-200 via-indigo-200 to-pink-200">
-        <Header/>
-        <Main/>
-        </body>
+        <div className="page">
+            <Header/>
+            {/*<Home/>*/}
+            {/*<Register/>*/}
+            {/*<Login/>*/}
+            {/*<CardsCatalog/>*/}
+        </div>
+
+
     )
 }
 

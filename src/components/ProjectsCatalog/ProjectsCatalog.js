@@ -1,9 +1,9 @@
-import './ProjectsList.css';
+import './ProjectsCatalog.css';
 import {Accordion} from "react-bootstrap";
 import Button from "../Button/Button";
 
 
-function ProjectsList() {
+function ProjectsCatalog() {
     return (
 
         <Accordion defaultActiveKey="0" className={"projects-wrapper"}>
@@ -45,4 +45,4 @@ function ProjectsList() {
     );
 }
 
-export default ProjectsList;
+export default ProjectsCatalog;
