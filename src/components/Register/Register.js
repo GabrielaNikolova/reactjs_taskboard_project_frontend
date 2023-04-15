@@ -14,13 +14,13 @@ function Register() {
                         Create an account
                     </h1>
                     <Form className="space-y-4 md:space-y-6" action="#">
-                        <div>
-                            <label htmlFor="fullName"
-                                   className="input-field-label">Full
-                                Name</label>
-                            <input type="name" name="fullName" id="fullName"
-                                   className="input-field"                                   placeholder="John Doe" required=""/>
-                        </div>
+                        {/*<div>*/}
+                        {/*    <label htmlFor="fullName"*/}
+                        {/*           className="input-field-label">Full*/}
+                        {/*        Name</label>*/}
+                        {/*    <input type="name" name="fullName" id="fullName"*/}
+                        {/*           className="input-field"                                   placeholder="John Doe" required=""/>*/}
+                        {/*</div>*/}
                         <div>
                             <label htmlFor="email"
                                    className="input-field-label">Email</label>
