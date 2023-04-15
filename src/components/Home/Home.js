@@ -1,5 +1,6 @@
 import './Home.css';
 import Button from "../Button/Button";
+import {Link} from "react-router-dom";
 
 function Home() {
     return (
@@ -9,7 +10,9 @@ function Home() {
             <p className="mb-6 text-lg font-semibold text-indigo-500 lg:text-xl sm:px-16 xl:px-48">
                 Keep everything in the same place — even if your team isn’t.
             </p>
-            {/*<Button value={"Register"}/>*/}
+            <Link to="/register">
+                <Button value={"Register"}/>
+            </Link>
 
         </div>
     )

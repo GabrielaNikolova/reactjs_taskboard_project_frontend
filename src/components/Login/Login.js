@@ -1,6 +1,7 @@
 import './Login.css';
 import {Form} from "react-bootstrap";
 import Button from "../Button/Button";
+import {Link} from "react-router-dom";
 
 
 function Login() {
@@ -29,8 +30,8 @@ function Login() {
                             value={"Sign in"}
                         />
                         <p className="text-sm font-light text-gray-500">
-                            Don’t have an account yet? <a href="#"
-                                                          className="font-medium text-primary-600 hover:underline ">Register</a>
+                            Don’t have an account yet? <Link to="/register"
+                                                          className="font-medium text-primary-600 hover:underline ">Register</Link>
                         </p>
                     </Form>
                 </div>

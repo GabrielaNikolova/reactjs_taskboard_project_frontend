@@ -1,16 +1,15 @@
-import './CardsWrapper.css';
+import './TasksWrapper.css';
 import {Collapse} from "react-bootstrap";
 import {useState} from "react";
-import AddCard from "../AddCard/AddCard";
+import AddTask from "../AddTask/AddTask";
 
-function CardsWrapperFooter() {
+function TasksWrapperFooter() {
     const [open, setOpen] = useState(false);
 
     return (
         <>
             <footer className="cards-wrapper-footer">
-                <a className="add-card-composer text-sm font-semibold after:content-none"
-                   href="#"
+                <button className="add-card-composer text-sm font-semibold after:content-none"
                    onClick={() => setOpen(!open)}
                    aria-controls="add-card"
                    aria-expanded={open}>
@@ -18,16 +17,16 @@ function CardsWrapperFooter() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                               d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
                     </svg>
-                    <span className="add-a-card">Add a card</span>
-                </a>
+                    <span className="add-a-card">Add new task</span>
+                </button>
             </footer>
             <Collapse in={open}>
                 <div className="add-card">
-                    <AddCard/>
+                    <AddTask/>
                 </div>
             </Collapse>
         </>
     );
 }
 
-export default CardsWrapperFooter;
+export default TasksWrapperFooter;

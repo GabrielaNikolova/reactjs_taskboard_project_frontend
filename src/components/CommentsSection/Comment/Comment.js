@@ -18,12 +18,7 @@ function Comment() {
                 </button>
             </div>
             <div className="relative flex-flow">
-                <textarea id="comment" rows="1" disabled="true"
-                          className="text-gray-900 text-sm mb-2 rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 "
-                          placeholder="AddComment">AddComment section</textarea>
-                <Button
-                    value={"Save"}
-                />
+                <p className="text-gray-900 text-sm mb-2 rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 ">AddComment section</p>
             </div>
         </article>
 

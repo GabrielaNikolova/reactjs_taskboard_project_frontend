@@ -1,6 +1,9 @@
 .details-box{
     overflow: auto;
     height: 100%;
+    /*margin: auto;*/
+    /*min-width: 50%;*/
+    /*min-height: 50%;*/
 }
 
 .desc-box{

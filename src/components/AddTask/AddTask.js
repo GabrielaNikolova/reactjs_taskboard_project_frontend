@@ -1,8 +1,8 @@
-import './AddCard.css';
+import './AddTask.css';
 import Button from "../Button/Button";
 import {Form} from "react-bootstrap";
 
-function AddCard() {
+function AddTask() {
 
     return (
         <Form className="add-card-form">
@@ -23,8 +23,8 @@ function AddCard() {
                 </span>
             </header>
             <textarea className="add-card-textarea text-gray-600 text-sm font-medium" typeof='text'
-                      placeholder="Enter a title for this card…"
-                      spellCheck="false">Enter a title for this card…</textarea>
+                      placeholder="Enter a title for this task…"
+                      spellCheck="false">Enter a title for this task…</textarea>
             <footer className="add-card-form-footer">
                 <Button
                     value={"Add"}
@@ -34,4 +34,4 @@ function AddCard() {
     );
 }
 
-export default AddCard;
+export default AddTask;

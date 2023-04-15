@@ -1,30 +1,33 @@
-import './CardsWrapper.css';
-import Card from "../Card/Card";
-import AddCard from "../AddCard/AddCard";
-import CardsWrapperFooter from "./CardsWrapperFooter";
+import './TasksWrapper.css';
+import Task from "../Task/Task";
+import TasksWrapperFooter from "./TasksWrapperFooter";
 
 
-function CardsWrapper() {
+function TasksWrapper(props) {
+    const task= {
+        title: "title",
+        priority: "priority",
+        category: props.wrapperTitle
+    }
 
     return (
         <div className="cards-wrapper">
             <header className="cards-wrapper-header">
-                <span className="cards-wrapper-title">Backlog</span>
-                <span
-                    className="cards-counter">6</span>
+                <span className="cards-wrapper-title">{props.wrapperTitle}</span>
+                {/*<span*/}
+                {/*    className="cards-counter">6</span>*/}
             </header>
             <div className="cards-container">
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <CardsWrapperFooter/>
+                <Task/>
+                <Task/>
+                <Task/>
+                <TasksWrapperFooter/>
             </div>
         </div>
     )
 }
 
-export default CardsWrapper;
+export default TasksWrapper;
 
 //
 // <button

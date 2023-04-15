@@ -1,10 +1,11 @@
 @import "components/Header/Logo/Logo.css";
 @import "components/Header/Header.css";
-@import "components/CardsCatalog/CardsCatalog.css";
-@import "components/CardsWrapper/CardsWrapper.css";
-@import "components/AddCard/AddCard.css";
-@import "components/Card/Card.css";
-@import "components/CardDetails/CardDetails.css";
+@import "components/TasksCatalog/TasksCatalog.css";
+@import "components/TasksWrapper/TasksWrapper.css";
+@import "components/AddTask/AddTask.css";
+@import "components/Task/Task.css";
+@import "components/TaskDetails/TaskDetails.css";
+@import "components/TaskEdit/TaskEdit.css";
 @import "components/Register/Register.css";
 @import "components/Login/Login.css";
 @import "components/CommentsSection/Comment/Comment.css";
