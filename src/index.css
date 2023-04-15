@@ -1,7 +1,7 @@
 @import "components/Header/Logo/Logo.css";
 @import "components/Header/Header.css";
 @import "components/TasksCatalog/TasksCatalog.css";
-@import "components/TasksWrapper/TasksWrapper.css";
+@import "components/TasksCatalog/TasksWrapper/TasksWrapper.css";
 @import "components/AddTask/AddTask.css";
 @import "components/Task/Task.css";
 @import "components/TaskDetails/TaskDetails.css";

@@ -21,7 +21,8 @@ function Header() {
                         </Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
-                <Link className="mx-2 text-md font-semibold text-gray-600 hover:text-indigo-700" to="/dashboard">Dashboard</Link>
+                <Link className="mx-2 text-md font-semibold text-gray-600 hover:text-indigo-700" to="/taskcatalog">Tasks
+                    Board</Link>
             </div>
             <div className="user-navigation">
                 <Dropdown>
@@ -29,16 +30,17 @@ function Header() {
                     <Dropdown.Menu className="dropdown-menu">
                         {/*<Dropdown.Item className="mx-2 text-md font-semibold text-indigo-700" href="#/action-1">Your*/}
                         {/*    Profile</Dropdown.Item>*/}
-                        <Dropdown.Item className="mx-2 text-md font-semibold text-indigo-700" href="#/action-3">Sign
-                            out</Dropdown.Item>
+                        <Dropdown.Item className="mx-2 text-md font-semibold text-indigo-700">
+                            <Link to="/logout">Sign out</Link>
+                        </Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
                 <>
                     <Link type="button" to="/login"
-                       className="nav-button mx-2 text-md font-semibold">Login</Link>
+                          className="nav-button mx-2 text-md font-semibold">Login</Link>
 
                     <Link type="button" to="/register"
-                       className="nav-button text-md font-semibold">Register</Link>
+                          className="nav-button text-md font-semibold">Register</Link>
 
 
                 </>

@@ -35,3 +35,16 @@
      --tw-text-opacity: 1;
      color: rgb(17 24 39 / var(--tw-text-opacity));
  }
+
+.custom-btn{
+    font-weight: 400;
+    font-size: small;
+    border-radius: .5rem;
+    color: whitesmoke;
+    padding: .4rem 0.7rem;
+    text-align: center;
+    line-height: 0.8rem;
+    --bs-bg-opacity: .8;
+    background-color: rgb(67 56 202 / var(--bs-bg-opacity));
+    cursor: pointer;
+}

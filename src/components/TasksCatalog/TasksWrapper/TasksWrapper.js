@@ -1,5 +1,5 @@
 import './TasksWrapper.css';
-import Task from "../Task/Task";
+import Task from "../../Task/Task";
 import TasksWrapperFooter from "./TasksWrapperFooter";
 
 

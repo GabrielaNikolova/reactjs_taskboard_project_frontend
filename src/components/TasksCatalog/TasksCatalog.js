@@ -1,5 +1,5 @@
 import './TasksCatalog.css';
-import TasksWrapper from "../TasksWrapper/TasksWrapper";
+import TasksWrapper from "./TasksWrapper/TasksWrapper";
 
 function TasksCatalog() {
 

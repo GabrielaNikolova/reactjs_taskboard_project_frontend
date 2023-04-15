@@ -11,7 +11,7 @@ const universalRequest = async (method, url, data) => {
 
         let buildRequest;
 
-        if (method = 'GET') {
+        if (method === 'GET') {
             buildRequest = fetch(url, {headers});
         } else {
             buildRequest = fetch(url, {
@@ -37,7 +37,7 @@ const universalRequest = async (method, url, data) => {
     }
 };
 
-export const get= universalRequest.bind({}, 'GET');
-export const post= universalRequest.bind({}, 'POST');
-export const put= universalRequest.bind({}, 'PUT');
-export const del= universalRequest.bind({}, 'DELETE');
+export const get = universalRequest.bind({}, 'GET');
+export const post = universalRequest.bind({}, 'POST');
+export const put = universalRequest.bind({}, 'PUT');
+export const del = universalRequest.bind({}, 'DELETE');

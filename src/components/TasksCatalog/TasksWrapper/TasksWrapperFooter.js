@@ -1,7 +1,7 @@
 import './TasksWrapper.css';
 import {Collapse} from "react-bootstrap";
 import {useState} from "react";
-import AddTask from "../AddTask/AddTask";
+import AddTask from "../../AddTask/AddTask";
 
 function TasksWrapperFooter() {
     const [open, setOpen] = useState(false);
