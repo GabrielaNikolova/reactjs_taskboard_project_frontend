@@ -13,7 +13,7 @@ export const AuthProvider = ({children}) => {
 
     const login = (authData) => {
         setAuth(authData);
-        navigateTo("/taskcatalog");
+        navigateTo("/tasks");
     }
 
 // call this function to sign out logged in auth

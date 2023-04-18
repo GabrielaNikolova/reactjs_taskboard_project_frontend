@@ -5,10 +5,14 @@ import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 import TasksCatalog from "./components/TasksCatalog/TasksCatalog";
-import ProjectsCatalog from "./components/ProjectsCatalog/ProjectsCatalog";
 import {AuthProvider} from "./contexts/AuthContext";
 import TaskDetails from "./components/TaskDetails/TaskDetails";
 import Logout from "./components/Logout/Logout";
+import {TaskProvider} from "./contexts/TaskContext";
+import PrivateRoute from "./components/common/PrivateRoute";
+import AddTask from "./components/AddTask/AddTask";
+import TaskEdit from "./components/TaskEdit/TaskEdit";
+import TaskOwner from "./components/common/TaskOwner";
 
 // const RegisterUser = lazy(() => import("./components/Register/Register"));
 
@@ -17,17 +21,29 @@ function App() {
         <AuthProvider>
             <div className="page">
                 <Header/>
-                <Routes>
-                    <Route path="/" element={<Home/>}/>
-                    <Route path="/login" element={<Login/>}/>
-                    <Route path="/register" element={<Register/>}/>
-                    <Route path="/projects" element={<ProjectsCatalog/>}/>
+                <TaskProvider>
+                    <Routes>
+                        <Route path="/" element={<Home/>}/>
+                        <Route path="/login" element={<Login/>}/>
+                        <Route path="/register" element={<Register/>}/>
+                        <Route path="/logout" element={<Logout/>}/>
+                        {/*<Route path="/projects" element={<ProjectsCatalog/>}/>*/}
 
-                    <Route path="/taskcatalog" element={<TasksCatalog/>}/>
-                    <Route path="/taskcatalog/:taskid" element={<TaskDetails/>}/>
-                    <Route path="/logout" element={<Logout/>}/>
+                        <Route path="/tasks" element={<TasksCatalog/>}/>
+                        <Route path="/tasks/:taskId" element={<TaskDetails/>}/>
 
-                </Routes>
+                        <Route path="crete-task" element={(
+                            <PrivateRoute>
+                                <AddTask/>
+                            </PrivateRoute>
+                        )}/>
+
+                        <Route element={<TaskOwner/>}>
+                            <Route path="tasks/:taskId/edit" element={<TaskEdit/>}/>
+                        </Route>
+
+                    </Routes>
+                </TaskProvider>
             </div>
 
         </AuthProvider>

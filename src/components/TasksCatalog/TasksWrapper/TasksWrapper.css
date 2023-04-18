@@ -78,7 +78,7 @@
 /*}*/
 
 
-.cards-wrapper-footer, .add-card-composer {
+.cards-wrapper-footer, .add-card-composer, .no-tasks {
     flex-shrink: 0 !important;
     padding: 0.5rem;
     margin: auto;

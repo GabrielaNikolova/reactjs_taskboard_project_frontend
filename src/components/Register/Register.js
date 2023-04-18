@@ -19,7 +19,7 @@ const Register = ({auth}) => {
         authenticationService.register(email, password)
             .then(authData => {
                 auth.login(authData);
-                navigate('/taskcatalog');
+                navigate('/tasks');
             })
     }
 

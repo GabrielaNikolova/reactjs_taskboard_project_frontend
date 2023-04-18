@@ -1,5 +1,4 @@
 import './Comment.css';
-import Button from "../../Button/Button";
 
 
 function Comment() {

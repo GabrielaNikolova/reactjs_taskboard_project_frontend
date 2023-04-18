@@ -21,7 +21,7 @@ const Login = () => {
         authService.login(email, password)
             .then(authData => {
                 login(authData);
-                navigate('/taskcatalog');
+                navigate('/tasks');
             })
             .catch(() => {
                 navigate('/err404');

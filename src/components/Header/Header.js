@@ -23,7 +23,7 @@ function Header() {
                 {/*        </Dropdown.Item>*/}
                 {/*    </Dropdown.Menu>*/}
                 {/*</Dropdown>*/}
-                <Link className="mx-2 text-md font-semibold text-gray-600 hover:text-indigo-700" to="/taskcatalog">Tasks
+                <Link className="mx-2 text-md font-semibold text-gray-600 hover:text-indigo-700" to="/tasks">Tasks
                     Board</Link>
             </div>
             <div className="user-navigation">

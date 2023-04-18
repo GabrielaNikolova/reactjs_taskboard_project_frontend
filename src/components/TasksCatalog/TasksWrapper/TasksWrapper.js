@@ -1,14 +1,13 @@
 import './TasksWrapper.css';
 import Task from "../../Task/Task";
 import TasksWrapperFooter from "./TasksWrapperFooter";
+import {useContext} from "react";
+import {TaskContext} from "../../../contexts/TaskContext";
 
 
-function TasksWrapper(props) {
-    const task= {
-        title: "title",
-        priority: "priority",
-        category: props.wrapperTitle
-    }
+const TasksWrapper = (props) => {
+    const {tasks} = useContext(TaskContext);
+
 
     return (
         <div className="cards-wrapper">
@@ -18,9 +17,10 @@ function TasksWrapper(props) {
                 {/*    className="cards-counter">6</span>*/}
             </header>
             <div className="cards-container">
-                <Task/>
-                <Task/>
-                <Task/>
+                {tasks.length > 0
+                    ? tasks?.filter(x => x.category === props.wrapperTitle).map(x => <Task key={x._id} task={x}/>)
+                    : <h3 className="no-tasks">No tasks yet</h3>
+                }
                 <TasksWrapperFooter/>
             </div>
         </div>

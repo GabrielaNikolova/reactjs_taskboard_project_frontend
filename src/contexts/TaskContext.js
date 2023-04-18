@@ -66,7 +66,7 @@ export const TaskProvider = ({children}) => {
             type: 'ADD_TASK',
             payload: taskData
         });
-        navigate('/taskcatalog');
+        navigate('/tasks');
     };
 
     const editTask = (taskId, taskData) => {
