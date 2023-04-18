@@ -7,19 +7,20 @@ import {TaskContext} from "../../../contexts/TaskContext";
 
 const TasksWrapper = (props) => {
     const {tasks} = useContext(TaskContext);
+    const filtered = tasks?.filter(x => x.category === props.wrapperTitle);
 
 
     return (
         <div className="cards-wrapper">
             <header className="cards-wrapper-header">
                 <span className="cards-wrapper-title">{props.wrapperTitle}</span>
-                {/*<span*/}
-                {/*    className="cards-counter">6</span>*/}
+                <span
+                    className="cards-counter">{filtered.length}</span>
             </header>
             <div className="cards-container">
-                {tasks.length > 0
-                    ? tasks?.filter(x => x.category === props.wrapperTitle).map(x => <Task key={x._id} task={x}/>)
-                    : <h3 className="no-tasks">No tasks yet</h3>
+                {filtered.length > 0
+                    ? filtered.map(x => <Task key={x._id} task={x}/>)
+                    : <h3 className="no-tasks font-bold">No tasks yet</h3>
                 }
                 <TasksWrapperFooter/>
             </div>

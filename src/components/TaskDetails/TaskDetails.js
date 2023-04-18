@@ -2,8 +2,58 @@ import {Modal} from "react-bootstrap";
 import './TaskDetails.css';
 import Button from "../Button/Button";
 import CommentsSection from "../CommentsSection/CommentsSection";
+import {useNavigate, useParams} from "react-router-dom";
+import {useContext, useEffect} from "react";
+import {TaskContext} from "../../contexts/TaskContext";
+import {useAuthentication} from "../../contexts/AuthContext";
+
+import * as commentService from '../../services/commentService';
+import * as taskService from '../../services/taskService';
 
 function TaskDetails(props) {
+
+    const navigate = useNavigate();
+    const {addComment, getTaskDetails, selectTask, deleteTask} = useContext(TaskContext);
+    const {user} = useAuthentication();
+    const {taskId} = useParams();
+
+    const currentTask = selectTask(taskId);
+    const isOwner = currentTask._ownerId === user._id;
+
+
+    useEffect(() => {
+        (async () => {
+            const taskDetails = await taskService.getDetails(taskId);
+            const taskComments = await commentService.getByTaskId(taskId);
+            getTaskDetails(taskId, {...taskDetails, comments: taskComments.map(x => `${x.user.email}: ${x.text}`)});
+        })();
+    }, []);
+
+    const addCommentHandler = (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(e.target);
+        const comment = formData.get('comment');
+
+        commentService.addComment(taskId, comment)
+            .then(result => {
+                addComment(taskId, comment);
+            });
+    };
+
+    const taskDeleteHandler = () => {
+        const confirmation = window.confirm('Are you sure you want to delete this task?');
+
+        if (confirmation) {
+            taskService.deleteTask(taskId)
+                .then(() => {
+                    deleteTask(taskId);
+                    navigate('/tasks');
+                });
+        }
+    };
+
+
     return (
         <Modal
             show={props.show}

@@ -58,25 +58,6 @@
     color: rgb(99 102 241 / var(--tw-text-opacity));
 }
 
-/*.add-card-button {*/
-/*    font-family: inherit;*/
-/*    font-size: 100%;*/
-/*    font-weight: inherit;*/
-/*    line-height: inherit;*/
-/*    padding: 0;*/
-/*    text-transform: none;*/
-/*    -webkit-appearance: button;*/
-/*    background-image: none;*/
-/*    border-radius: var(--bs-border-radius) !important;*/
-/*    margin: 0 0 0 auto;*/
-/*    display: flex;*/
-/*    height: 1.5rem;*/
-/*    width: 1.5rem;*/
-/*    align-items: center;*/
-/*    justify-content: center;*/
-/*    cursor: none;*/
-/*}*/
-
 
 .cards-wrapper-footer, .add-card-composer, .no-tasks {
     flex-shrink: 0 !important;

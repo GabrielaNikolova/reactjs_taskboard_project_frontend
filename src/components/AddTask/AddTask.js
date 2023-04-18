@@ -1,25 +1,20 @@
 import './AddTask.css';
 import Button from "../Button/Button";
-import {Form} from "react-bootstrap";
 
 function AddTask() {
 
     return (
-        <Form className="add-card-form">
+        <form className="add-card-form">
             <header className="add-card-form-header">
                 <span className="priority-button form-low-pr">
-                    <input className="form-checkbox" type="radio" name="priority"
-                           alt="Low Priority" value="card-color-low"/>
-                    <label className="form-label text-md font-medium" htmlFor="Low Priority">Low Priority</label></span>
-                <span className="priority-button form-med-pr"><input className="form-checkbox" type="radio"
-                                                                     name="priority"
-                                                                     alt="Med Priority" value="card-color-med"/><label
-                    className="form-label text-md font-medium" htmlFor="Med Priority">Med Priority</label></span>
-                <span className="priority-button form-high-pr"><input className="form-checkbox" type="radio"
-                                                                      name="priority"
-                                                                      alt="High Priority"
-                                                                      value="card-color-high"/><label
-                    className="form-label text-md font-medium" htmlFor="High Priority">High Priority</label>
+                    <input className="form-checkbox" type="radio" name="priority" alt="Low Priority" value=""/>
+                    <label className="form-label card-color-low" htmlFor="Low Priority">Low Priority</label></span>
+                <span className="priority-button form-med-pr">
+                    <input className="form-checkbox" type="radio" name="priority" alt="Med Priority" value=""/>
+                    <label className="form-label card-color-medium" htmlFor="Med Priority">Med Priority</label></span>
+                <span className="priority-button form-high-pr">
+                    <input className="form-checkbox" type="radio" name="priority" alt="High Priority" value=""/>
+                    <label className="form-label card-color-high" htmlFor="High Priority">High Priority</label>
                 </span>
             </header>
             <textarea className="add-card-textarea text-gray-600 text-sm font-medium" typeof='text'
@@ -30,7 +25,7 @@ function AddTask() {
                     value={"Add"}
                 />
             </footer>
-        </Form>
+        </form>
     );
 }
 
