@@ -1,12 +1,12 @@
-.details-box{
+.details-box {
     overflow: auto;
-    height: 100%;
-    /*margin: auto;*/
-    /*min-width: 50%;*/
-    /*min-height: 50%;*/
+    margin: auto;
+    min-width: 60%;
+    max-height: 80%;
+
 }
 
-.desc-box{
+.desc-box {
     pointer-events: auto;
     --bs-bg-opacity: 1;
     --tw-bg-opacity: 1;
@@ -18,7 +18,7 @@
     font-weight: inherit;
     margin: 0;
     resize: vertical;
-    padding: .25rem!important;
+    padding: .25rem !important;
     display: block;
     width: 100%;
     font-size: 0.875rem;
@@ -27,11 +27,11 @@
     color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 
-.desc-box:disabled{
+.desc-box:disabled {
     background-color: transparent !important;
 }
 
-.delete-card-btn{
+.delete-card-btn {
     font-weight: 400;
     font-size: small;
     border-radius: .5rem;
