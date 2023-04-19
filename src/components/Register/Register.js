@@ -1,5 +1,5 @@
 import './Register.css';
-import Button from "../Button/Button";
+import Button from "../common/Button/Button";
 import {Link, useNavigate} from "react-router-dom";
 import * as authenticationService from "../../services/authService";
 import {withAuthentication} from "../../contexts/AuthContext";
@@ -31,13 +31,12 @@ const Register = ({auth}) => {
                     Create an account
                 </h1>
                 <form onSubmit={onSubmit} id="register" className="space-y-4 md:space-y-6">
-                    {/*<div>*/}
-                    {/*    <label htmlFor="fullName"*/}
-                    {/*           className="input-field-label">Full*/}
-                    {/*        Name</label>*/}
-                    {/*    <input type="name" name="fullName" id="fullName"*/}
-                    {/*           className="input-field"                                   placeholder="John Doe" required=""/>*/}
-                    {/*</div>*/}
+                    <div>
+                        <label htmlFor="username"
+                               className="input-field-label">Username</label>
+                        <input type="username" name="username" id="username"
+                               className="input-field"                                   placeholder="John Doe" required=""/>
+                    </div>
                         <div>
                             <label htmlFor="email"
                                    className="input-field-label">Email</label>
@@ -48,7 +47,7 @@ const Register = ({auth}) => {
                         <div>
                             <label htmlFor="password"
                                    className="input-field-label">Password</label>
-                            <input type="password" name="password" id="password"
+                            <input type="password" name="password" id="register-password"
                                    placeholder="**********"
                                    className="input-field"
                             />

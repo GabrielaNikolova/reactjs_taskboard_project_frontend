@@ -1,16 +1,14 @@
-import {Modal} from "react-bootstrap";
 import './TaskDetails.css';
-import Button from "../Button/Button";
-import CommentsSection from "../CommentsSection/CommentsSection";
-import {Link, useNavigate, useParams} from "react-router-dom";
+import Button from "../common/Button/Button";
 import {useContext, useEffect} from "react";
+import {Link, useNavigate, useParams} from "react-router-dom";
 import {TaskContext} from "../../contexts/TaskContext";
 import {useAuthentication} from "../../contexts/AuthContext";
 
-import * as commentService from '../../services/commentService';
 import * as taskService from '../../services/taskService';
+import * as commentService from '../../services/commentService';
 
-function TaskDetails() {
+const TaskDetails = () => {
 
     const navigate = useNavigate();
     const {addComment, getTaskDetails, selectTask, deleteTask} = useContext(TaskContext);
@@ -18,16 +16,18 @@ function TaskDetails() {
     const {taskId} = useParams();
 
     const currentTask = selectTask(taskId);
+
     const isOwner = currentTask._ownerId === user._id;
 
 
     useEffect(() => {
         (async () => {
             const taskDetails = await taskService.getDetails(taskId);
+            console.log(taskDetails);
             const taskComments = await commentService.getByTaskId(taskId);
-            getTaskDetails(taskId, {...taskDetails, comments: taskComments.map(x => `${x.user.email}: ${x.text}`)});
+            getTaskDetails(taskId, {...taskDetails, comments: taskComments.map(x => `${x.user.username}: ${x.text}`)});
         })();
-    }, []);
+    }, [])
 
     const addCommentHandler = (e) => {
         e.preventDefault();
@@ -55,14 +55,6 @@ function TaskDetails() {
 
 
     return (
-        // <Modal
-        //     show={props.show}
-        //     cancel={props.close}
-        //     size="md"
-        //     centered
-        //     className={"details-box"}
-        // >
-
         <div className="details-box relative p-4 bg-white rounded-lg shadow">
 
             <div
@@ -90,17 +82,45 @@ function TaskDetails() {
                     <span><p className="mb-2 text-sm font-medium">{currentTask.category}</p></span>
                 </div>
             </div>
-            <div className="mb-2">
-                <Link to={`/tasks/${taskId}/edit`} className="mr-2">
-                    <Button value={"Edit"}/>
-                </Link>
-                <Button className="delete-card-btn hover:text-white hover:bg-red-600" onClick={taskDeleteHandler} value={"Delete"}/>
+            {/*{isOwner &&*/}
+                <div className="mb-2">
+                    <Link to={`/tasks/${taskId}/edit`} className="mr-2">
+                        <Button value={"Edit"}/>
+                    </Link>
+                    <Button className="delete-card-btn hover:text-white hover:bg-red-600" onClick={taskDeleteHandler}
+                            value={"Delete"}/>
+                </div>
+            {/*}*/}
+            <div className="comments-section">
+                <article className="add-comment">
+                    <form onSubmit={addCommentHandler}>
+                        <label htmlFor="comment"
+                               className="block mb-2 text-sm font-medium text-gray-900">Comments</label>
+                        <textarea id="comment"
+                                  name="comment"
+                                  rows="1"
+                                  className="comment-text"
+                                  placeholder="Write a comment"></textarea>
+                        <Button type="submit"
+                                value={"Publish comment"}
+                        />
+                    </form>
+                </article>
+
+                <ul className="comments-list">
+                    {currentTask.comments?.map(x =>
+                        <li key={x} className="single-comment">
+                            <p className="comment-text text-gray-900 text-sm mb-2 rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 ">{x}</p>
+                        </li>
+                    )}
+
+                    {!currentTask.comments &&
+                        <p className="no-comment">No comments.</p>
+                    }
+                </ul>
             </div>
-            <CommentsSection/>
         </div>
 
-
-        // </Modal>
 
     );
 }

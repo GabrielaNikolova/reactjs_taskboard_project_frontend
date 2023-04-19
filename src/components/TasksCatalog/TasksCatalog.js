@@ -10,10 +10,11 @@ function TasksCatalog() {
                 <h1 className="text-2xl font-bold">Team Project Board</h1>
             </div>
             <div className="wrappers-container space-x-6">
-                <TasksWrapper wrapperTitle="To Do"/>
-                <TasksWrapper wrapperTitle="In Progress"/>
-                <TasksWrapper wrapperTitle="Testing"/>
-                <TasksWrapper wrapperTitle="Done"/>
+
+                <TasksWrapper key="toDo" wrapperTitle="To Do"/>
+                <TasksWrapper key="inProgress" wrapperTitle="In Progress"/>
+                <TasksWrapper key="testing" wrapperTitle="Testing"/>
+                <TasksWrapper key="done" wrapperTitle="Done"/>
             </div>
         </main>
     );

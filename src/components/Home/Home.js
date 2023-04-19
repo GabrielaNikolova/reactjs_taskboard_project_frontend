@@ -1,5 +1,5 @@
 import './Home.css';
-import Button from "../Button/Button";
+import Button from "../common/Button/Button";
 import {Link} from "react-router-dom";
 
 function Home() {

@@ -1,6 +1,6 @@
 import './Login.css';
 import {Form} from "react-bootstrap";
-import Button from "../Button/Button";
+import Button from "../common/Button/Button";
 import {Link, useNavigate} from "react-router-dom";
 import {useContext} from "react";
 import {AuthContext} from "../../contexts/AuthContext";
@@ -41,7 +41,7 @@ const Login = () => {
                         <label htmlFor="email"
                                className="input-field-label">Email</label>
                         <input type="email" name="email" id="email" placeholder="email@a.com"
-                               className="input-field" required=""/>
+                               className="input-field"/>
                     </div>
                     <div>
                         <label htmlFor="password"
@@ -49,8 +49,8 @@ const Login = () => {
                         <input type="password" name="password" id="password" placeholder="••••••••"
                                className="input-field" required=""/>
                     </div>
-                    <Button
-                        value={"Sign in"}
+                    <Button type="submit"
+                            value={"Sign in"}
                     />
                     <p className="text-sm font-light text-gray-500">
                         Don’t have an account yet? <Link to="/register"

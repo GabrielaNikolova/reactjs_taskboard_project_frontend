@@ -6,9 +6,6 @@ function Button(props) {
         <button
             id={props.id}
             className={props.className}
-            onClick={props.onClick}
-            type={props.type}
-            disabled={props.isDisabled}
         >
             {props.value}
         </button>

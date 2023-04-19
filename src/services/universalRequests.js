@@ -39,5 +39,6 @@ const universalRequest = async (method, url, data) => {
 
 export const get = universalRequest.bind({}, 'GET');
 export const post = universalRequest.bind({}, 'POST');
+export const patch = universalRequest.bind({}, 'PATCH');
 export const put = universalRequest.bind({}, 'PUT');
 export const del = universalRequest.bind({}, 'DELETE');

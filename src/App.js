@@ -14,8 +14,6 @@ import AddTask from "./components/AddTask/AddTask";
 import TaskEdit from "./components/TaskEdit/TaskEdit";
 import TaskOwner from "./components/common/TaskOwner";
 
-// const RegisterUser = lazy(() => import("./components/Register/Register"));
-
 function App() {
     return (
         <AuthProvider>
@@ -26,21 +24,26 @@ function App() {
                         <Route path="/" element={<Home/>}/>
                         <Route path="/login" element={<Login/>}/>
                         <Route path="/register" element={<Register/>}/>
-                        <Route path="/logout" element={<Logout/>}/>
-                        {/*<Route path="/projects" element={<ProjectsCatalog/>}/>*/}
 
-                        <Route path="/tasks" element={<TasksCatalog/>}/>
-                        <Route path="/tasks/:taskId" element={<TaskDetails/>}/>
-
-                        <Route path="crete-task" element={(
+                        <Route path="/create-task" element={(
                             <PrivateRoute>
                                 <AddTask/>
                             </PrivateRoute>
                         )}/>
 
+
                         <Route element={<TaskOwner/>}>
-                            <Route path="tasks/:taskId/edit" element={<TaskEdit/>}/>
+                            <Route path="/tasks/:taskId/edit" element={<TaskEdit/>}/>
                         </Route>
+
+
+                        <Route element={<PrivateRoute/>}>
+                            <Route path="/logout" element={<Logout/>}/>
+                        </Route>
+
+                        <Route path="/tasks" element={<TasksCatalog/>}/>
+                        <Route path="/tasks/:taskId" element={<TaskDetails/>}/>
+
 
                     </Routes>
                 </TaskProvider>

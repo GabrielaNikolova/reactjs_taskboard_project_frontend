@@ -12,7 +12,7 @@
     --tw-bg-opacity: 0.9;
 }
 
-.card-priority-low, .card-priority-medium, .card-priority-high {
+.card-priority-Low, .card-priority-Medium, .card-priority-High {
     padding-right: 0.6rem !important;
     padding-left: 0.6rem !important;
     display: flex;
@@ -25,15 +25,15 @@
     color: white;
 }
 
-.card-priority-low{
+.card-priority-Low{
     background: linear-gradient(90deg, #9ea7fc 17%, #6eb4f7 83%);
 }
 
-.card-priority-medium {
+.card-priority-Medium {
     background: linear-gradient(138.6789deg, #81d5ee 17%, #7ed492 83%);
 }
 
-.card-priority-high {
+.card-priority-High {
     background: linear-gradient(138.6789deg, #c781ff 17%, #e57373 83%);
 }
 

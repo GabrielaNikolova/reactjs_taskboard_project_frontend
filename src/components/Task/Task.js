@@ -1,9 +1,11 @@
 import './Task.css';
 import {Link} from "react-router-dom";
 
-function Task({task}) {
+const Task = ({task}) => {
+
+
     return (
-        <div className="card-ticket bg-opacity-90 group hover:bg-opacity-100" draggable="true">
+        <div className="card-ticket bg-opacity-90 group hover:bg-opacity-100">
             <header className="card-header flex items-center">
                     <span>
                 <h3 className={"card-priority-" + task.priority}>{task.priority} priority</h3></span>
@@ -14,9 +16,9 @@ function Task({task}) {
                     </Link>
                 </>
             </header>
-            <h4 className="card-title mt-3 text-sm font-medium">{task.title}</h4>
+            <h4 className="card-title mt-3 text-md font-medium">{task.title}</h4>
             <footer className="card-footer">
-                {task.comments.length > 0
+                {task.comments?.length > 0
                     ? <div className="comments-counter relative flex items-center ml-4">
                         <span className="material-icons text-gray-300">textsms</span>
                     </div>

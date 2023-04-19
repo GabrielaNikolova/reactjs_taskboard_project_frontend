@@ -50,7 +50,7 @@ export const TaskProvider = ({children}) => {
             type: 'GET_TASK_DETAILS',
             payload: taskDetails,
             taskId
-        });
+        })
     };
 
     const addComment = (taskId, comment) => {

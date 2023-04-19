@@ -1,3 +1,11 @@
+.add-card-box{
+    margin: auto;
+    max-width: 50%;
+    max-height: 70%;
+}
+
+
+
 .add-card-form {
     margin-top: 0.5rem !important;
     padding: 0.7rem !important;
