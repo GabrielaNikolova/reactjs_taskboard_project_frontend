@@ -34,14 +34,14 @@ function TaskEdit() {
 
 
     const onSubmit = (e) => {
-        // e.preventDefault();
+        e.preventDefault();
 
         const taskData = Object.fromEntries(new FormData(e.target));
 
         taskService.editTask(taskId, taskData)
             .then(result => {
                 editTask(taskId, result);
-                navigate(`/tasks/${taskId}`)
+                navigate(`/tasks`)
             });
     };
 

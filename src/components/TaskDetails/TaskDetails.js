@@ -82,7 +82,7 @@ const TaskDetails = () => {
                     <span><p className="mb-2 text-sm font-medium">{currentTask.category}</p></span>
                 </div>
             </div>
-            {/*{isOwner &&*/}
+            {isOwner &&
                 <div className="mb-2">
                     <Link to={`/tasks/${taskId}/edit`} className="mr-2">
                         <Button value={"Edit"}/>
@@ -90,7 +90,7 @@ const TaskDetails = () => {
                     <Button className="delete-card-btn hover:text-white hover:bg-red-600" onClick={taskDeleteHandler}
                             value={"Delete"}/>
                 </div>
-            {/*}*/}
+            }
             <div className="comments-section">
                 <article className="add-comment">
                     <form onSubmit={addCommentHandler}>
